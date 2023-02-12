@@ -8,10 +8,30 @@
     <title>Task Manager App</title>
   </head>
   <body>
-    
+    <form action="#" id="pop_up">
+      <button onclick="clicked()">Open form</button>
+      <div class="main-container">
+      <div class="left">
+        <label >Name</label>
+        <br>
+        <input type="text" class="edittask">
+        <br>
+        <label>Last Date</label><br>
+        <input type="date" class="edittask">
+      </div>
+      <div class="right">
+        <label>Description</label><br>
+        <textarea name="" id="" cols="30"  class="edittask"></textarea><br>
+        <label for="">Task Priority</label><br>
+        <textarea name="" id="" cols="30" class="edittask" ></textarea>
+      </div>
+    </div>
+    <button id="edit" onclick="click()">Edit</button>
+    </form>
         <input type="text" class="todo_input" id="todo_input" placeholder="Add New Task ....">
         <button id="todo_submit"
         class="btn">Add Task</button>
+        
     </div>
     <div class="todo-container">
       <div class="status" id="no_status">

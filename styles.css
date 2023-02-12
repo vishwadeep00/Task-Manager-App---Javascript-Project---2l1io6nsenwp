@@ -133,4 +133,16 @@ background-color: #3a8642;
   color:red;
   cursor:pointer;
 }
+form{
+  display: none;
+position:static;
+}
+#pop_up{
+  width: 300px;
+ text-align: center;
+  background-color: #89cfeb;
+}
 
+.visible{
+  display:block;
+}

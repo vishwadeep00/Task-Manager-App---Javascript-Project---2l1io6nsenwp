@@ -1,6 +1,5 @@
 const addTasks = document.querySelectorAll(".addTask");
 const statuses = document.querySelectorAll(".status");
-
 let draggableTodo = null;
 
 addTasks.forEach((todo) => {
@@ -33,7 +32,6 @@ statuses.forEach((status) => {
 
 function dragOver(e) {
   e.preventDefault();
-  //   console.log("dragOver");
 }
 
 function dragEnter() {
@@ -66,8 +64,8 @@ btns.forEach((btn) => {
 close_modals.forEach((btn) => {
   btn.addEventListener("click", () => {
     const modal = btn.closest(".modal");
-    modal.classList.remove("active");
-    overlay.classList.remove("active");
+    // modal.classList.remove("active");
+    // overlay.classList.remove("active");
   });
 });
 
@@ -98,7 +96,8 @@ function createTodo() {
   todo_div.classList.add("addtask");
   todo_div.setAttribute("draggable", "true");
 {/* <i class="fa-regular fa-circle"></i> */}
- 
+mypopup();
+
     const circleIcon = document.createElement('i');
     circleIcon.classList.add('fa-regular');
     circleIcon.classList.add('fa-circle');
@@ -123,8 +122,18 @@ function createTodo() {
   todo_div.addEventListener("dragstart", dragStart);
   todo_div.addEventListener("dragend", dragEnd);
 
-  document.getElementById("todo_input").value = "";
+  let todo_form = document.getElementById("todo_input")
+  todo_form.value = "";
   todo_form.classList.remove("active");
   overlay.classList.remove("active");
 }
+ function mypopup(){
+  let container = document.getElementById("pop_up");
+  console.log(container);
 
+      container.classList.add('visible');
+    }
+function clicked(){
+    let container = document.getElementById("pop_up");
+     container.classList.remove('visible')
+ }
